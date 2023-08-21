@@ -1,0 +1,81 @@
+.Header {
+    grid-area: head;
+    background: rgb(32, 35, 41);
+}
+
+.Header h1, .Header h3 {
+    color: rgb(236,236,236);
+    float:left;
+    margin: 1rem;
+}
+.nav{
+   
+    margin-right: 100px;
+    text-align: center;
+    float: right;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+.nav button {
+    margin: 0.5rem;
+    padding: 0.9rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+input {
+    padding: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+  }
+/* .menu2{
+    background: #6a4c75;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 1px;
+    position: relative;
+    float: left;
+    border-left: 1px solid white;
+}
+.podmenu2{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 120%;
+}
+.menu2>a{
+    color: #eadce7;
+}
+.menu2:hover{
+    background: #aa8ab3;
+}
+.menu2:hover .podmenu2{
+    display: block;
+}
+
+.podmenu2>li{
+    color:#eadce7;
+    background: #b7cbe2;
+    padding: 10px;
+    border-bottom: 1px solid #eadce7;
+}
+a{
+    text-decoration: none;
+}
+.podmenu2>li>a{
+    color:#eadce7;
+}
+.podmenu2>li:hover{
+    background: #cdd18e;
+
+}
+.podmenu2>li:hover a{
+    color:#868c22;
+} */

@@ -1,0 +1,79 @@
+*{
+    font-family: Fire Sans,Droid Sans,Helvetica Neue, sans-serif;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+        "head head head"
+        "sidebar main main "
+        "sidebar main main ";
+}
+
+.user-page img {
+    max-width: 200px;
+    max-height: 200px;
+}
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+a.active {
+    color: burlywood;
+}
+/* .Sidebar{
+    height:100%;
+    width: 200px;
+} */
+h3{
+    color: rgb(32, 15, 15);
+}
+.btn-list{
+    width: 100%;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+.btn-buyGoods{
+    color:rgb(32, 15, 15);
+    background: rgb(0, 150, 0);
+    padding: 0.8rem;
+    margin: 1rem;
+    border-radius: 3px;
+}
+.userlist {
+    border: '1px solid black';
+    text-align: 'center';
+    /* style={{ background: 'lightgray', padding: '5px', border: '1px solid black' }} */
+}
+.userlist thead tr {
+    background-color: rgb(116, 202, 45);
+    text-align: left;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .userlist th {
+    padding: 10px;
+  }
+  
+  /* Стилізація комірок таблиці */
+  .userlist tbody tr {
+    border: 1px solid black;
+  }
+  
+  .userlist td {
+    padding: 10px;
+  }
+  
+  /* Додамо відступи для заголовка таблиці */
+
+h1 {
+    margin-bottom: 20px;
+  }
+
+h5,h3{
+    margin-left: 20px;
+}

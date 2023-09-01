@@ -37,7 +37,7 @@ export default function ProductDetails() {
       <h3>Товар з категорії: <i>{product.subcategoriesGoods.categoriesGoods.name}</i></h3><hr></hr>
       {/* <h3>Товар з підкатегорії: <i>{product.subcategoriesGoods.name}</i></h3><hr></hr> */}
       <h1>{product.name}</h1>
-      <h2>{product.goodsorders}</h2>
+      {/* <h2>{product.goodsorders}</h2> */}
       <table>
         <tr>
           <td><img src={product.photosGoods[0].path} alt={product.name}></img></td>

@@ -13,6 +13,7 @@ import UserPage from './Pages/Users/UserPage';
 import ProductDetails from './Pages/Products/ProductDetails';
 import ProductList from './Pages/Products/ProductList';
 import Categories from './Pages/Products/Categories';
+import PaymentPage from './Pages/Products/PaymentPage';
 import './global.css';
 // import ModalWnd from './components/Modal/ModalWnd';
 import {
@@ -47,6 +48,7 @@ const router = createBrowserRouter(
             <Route path='categoriesGoods'  element={<Categories/>} />
             <Route path='photos'  element={<Photos/>} />
             <Route path='posts'  element={<Posts/>} />
+            <Route path='/payment' element={<PaymentPage />} />
             
             {/* <Route path='users/:userId' loader={loader} element={<UserPage />} errorElement={<ErrorPage/>} /> */}
             {/* <Route path="/users/:userId" render={({ match }) => <UserPage userId={match.params.userId} />} /> */}

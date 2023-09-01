@@ -38,17 +38,20 @@ export default function ModalWnd({ call, onDestroy }) {
                     <table>
                         <tr>
                             <td><h2>{product.name}</h2></td>
-                            <td><button>Видалити</button></td>
+                            <td><button >Видалити</button></td>
                         </tr>
                         <tr>
-                            {/* <td><img src={product.photosGoods[0].path} alt={product.name}></img></td> */}
+                            <td><img src={product.photosGoods[0].path} alt={product.name}></img></td>
                             <td>
                                 <tr>
                                     <td><h3>Кількість: </h3></td>
+                                    
                                 <td><input type='number' id='number' min={0} size='50' /></td>
+                                <td></td>
                                 </tr>
+                                <tr><h3>Сума {product.price}</h3></tr>
                                 
-                                <button className='accept'><Link>До оплати</Link></button>{/*input method='post' */}
+                                <button className='accept'><Link to='/payment' className='accept'>До оплати</Link></button>{/*input method='post' */}
                                 <button onClick={onDestroy} className='reject'>Переглянути товар</button>
                             </td>
                         </tr>

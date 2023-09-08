@@ -8,14 +8,14 @@ function ProductList() {
 
   useEffect(() => {
     // Симулюємо отримання списку товарів з сервера або API
-    axios.get('http://localhost:8081/goods')
+    axios.get('http://localhost:8080/goods')
       .then(response => setProducts(response.data))
       .catch(error => console.log(error));
   }, []);
   console.log(products);
   // Перевірка, чи є products масивом перед використанням map
   if (!Array.isArray(products)) {
-    return <div>Loading...</div>; // Або можна показати попередження або помилку
+    return <div>Товарів ще немає</div>; // Або можна показати попередження або помилку
   }
   return (
     <div className="Main">
@@ -27,7 +27,7 @@ function ProductList() {
           <Link to={`/goods/${product.id}`}>
             <button className='btn-list'>
               <h2>{product.name}</h2>
-              {/* <img src={product.photosGoods[0].path} alt={product.name}></img> */}
+              <img src={product.photosGoodsDTOS[0].path} alt={product.name}></img>
               <p>{product.short_discription}</p>
             </button>
           </Link>

@@ -13,6 +13,7 @@ import UserPage from './Pages/Users/UserPage';
 import ProductDetails from './Pages/Products/ProductDetails';
 import ProductList from './Pages/Products/ProductList';
 import Categories from './Pages/Products/Categories';
+import OneCategory from './Pages/Products/OneCategory';
 import PaymentPage from './Pages/Products/PaymentPage';
 import './global.css';
 // import ModalWnd from './components/Modal/ModalWnd';
@@ -46,6 +47,7 @@ const router = createBrowserRouter(
             <Route path='goods/:id'  element={<ProductDetails/>} />
             <Route path='comments'  element={<Comments/>} />
             <Route path='categoriesGoods'  element={<Categories/>} />
+            <Route path='categoriesGoods/:id'  element={<OneCategory/>} />
             <Route path='photos'  element={<Photos/>} />
             <Route path='posts'  element={<Posts/>} />
             <Route path='/payment' element={<PaymentPage />} />

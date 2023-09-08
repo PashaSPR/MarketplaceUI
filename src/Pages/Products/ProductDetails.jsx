@@ -19,7 +19,7 @@ export default function ProductDetails() {
 
   useEffect(() => {
     // Запит до API для отримання даних про товар за id
-    axios.get(`http://localhost:8081/goods/getOne?id=${id}`)
+    axios.get(`http://localhost:8080/goods/getOne?id=${id}`)
       .then(response => setProduct(response.data))
       .catch((error) => console.log(error));
     // Запит до API для отримання даних про користувача за id
@@ -34,13 +34,13 @@ export default function ProductDetails() {
   console.log(product);
   return (
     <div className='Main'>
-      <h3>Товар з категорії: <i>{product.subcategoriesGoods.categoriesGoods.name}</i></h3><hr></hr>
+      {/* <h3>Товар з категорії: <i>{product.subcategoriesGoods.categoriesGoods.name}</i></h3><hr></hr> */}
       {/* <h3>Товар з підкатегорії: <i>{product.subcategoriesGoods.name}</i></h3><hr></hr> */}
       <h1>{product.name}</h1>
       {/* <h2>{product.goodsorders}</h2> */}
       <table>
         <tr>
-          <td><img src={product.photosGoods[0].path} alt={product.name}></img></td>
+          <td><img src={product.photosGoodsDTOS[0].path} alt={product.name}></img></td>
           <td><div className="App">
             <ModalWnd call={modalState} onDestroy={() => setModalState(false)} />
             <button onClick={() => setModalState(true)} className='btn-buyGoods'>Додати в кошик </button>

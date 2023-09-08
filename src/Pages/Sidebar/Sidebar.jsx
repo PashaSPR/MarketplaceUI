@@ -8,10 +8,10 @@ function Sidebar() {
     const [categories, setCategories] = useState([]);
     useEffect(() => {
         // Симулюємо отримання списку товарів з сервера або API
-        axios.get('http://localhost:8081/subcategoriesGoods')
+        axios.get('http://localhost:8080/subcategoriesGoods')
             .then((response) => setSubcategories(response.data))
             .catch((error) => console.log(error));
-        axios.get('http://localhost:8081/categoriesGoods')
+        axios.get('http://localhost:8080/categoriesGoods')
             .then((response) => setCategories(response.data))
             .catch((error) => console.log(error));
     }, []);
@@ -45,20 +45,22 @@ function Sidebar() {
             </nav>
             <hr></hr>
             <h3>Субкатегорії</h3>
-            {subcategories.map((subcategory) => (
                 <ul>
-                    <li><NavLink to="">{subcategory.name}</NavLink></li>
-                    {/* фільтрація товарів по віповідній категорії чи субкатегорії*/}
+                    {/* фільтрація товарів по віповідній категорії чи субкатегорії */}
+            {subcategories.map((subcategory) => (
+                    <li key={subcategory.id}><NavLink to="">{subcategory.name}</NavLink></li>
+                    
+                    ))}
                 </ul>
-            ))}
             <hr></hr>
             <h3>Категорії</h3>
-            {categories.map((category) => (
-                <ul>
-                    <li><NavLink to="">{category.name}</NavLink></li>
-                    {/* фільтрація товарів по віповідній категорії*/}
-                </ul>
-            ))}
+            <ul>
+                {categories.map((category) => (
+                    <li key={category.id}>
+                        <NavLink to={`/categoriesGoods/${category.id}`}>{category.name}</NavLink>
+                    </li>
+                ))}
+            </ul>
 
         </div>
     );

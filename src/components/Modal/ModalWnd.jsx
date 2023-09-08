@@ -11,7 +11,7 @@ export default function ModalWnd({ call, onDestroy }) {
 
     useEffect(() => {
         // Запит до API для отримання даних про користувача за id
-        fetch(`http://localhost:8081/goods/getOne?id=${id}`)
+        fetch(`http://localhost:8080/goods/getOne?id=${id}`)
             .then((response) => response.json())
             .then((data) => setProduct(data))
             .catch((error) => console.log(error));
@@ -41,7 +41,7 @@ export default function ModalWnd({ call, onDestroy }) {
                             <td><button >Видалити</button></td>
                         </tr>
                         <tr>
-                            <td><img src={product.photosGoods[0].path} alt={product.name}></img></td>
+                            <td><img src={product.photosGoodsDTOS[0].path} alt={product.name}></img></td>
                             <td>
                                 <tr>
                                     <td><h3>Кількість: </h3></td>

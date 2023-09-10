@@ -64,11 +64,16 @@ export default function ProductDetails() {
             <button onClick={() => setModalState(true)} className='btn-buyGoods'>Додати в кошик </button>
             {/* має записувати в кошик */}
             <button><Link to="/goods">Повернутися до товарів</Link></button>
+<<<<<<< HEAD
             <p>ID: {product.id}</p>
 <<<<<<< HEAD
             <p>Ціна {product.price}</p>
 =======
 >>>>>>> d29644f (доданo)
+=======
+            <p>Залишок: {product.id}</p>
+            <p>Ціна <input type='text' value={product.id} readOnly></input></p>
+>>>>>>> f54031b (details)
           </div>
           </td>
         </tr>

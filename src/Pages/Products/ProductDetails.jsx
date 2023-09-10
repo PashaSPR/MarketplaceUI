@@ -23,7 +23,7 @@ export default function ProductDetails() {
       .then(response => setProduct(response.data))
       .catch((error) => console.log(error));
     // Запит до API для отримання даних про користувача за id
-    // axios.get(`http://localhost:8081/subcategoriesGoods/getOne?id=${1}`)
+    // axios.get(`http://localhost:8080/subcategoriesGoods/getOne?id=${1}`)
     //   .then(response => setSubcategories(response.data))
     //   .catch((error) => console.log(error));
       
@@ -47,6 +47,7 @@ export default function ProductDetails() {
             {/* має записувати в кошик */}
             <button><Link to="/goods">Повернутися до товарів</Link></button>
             <p>ID: {product.id}</p>
+            <p>Ціна {product.price}</p>
           </div>
           </td>
         </tr>

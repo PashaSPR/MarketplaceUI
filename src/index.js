@@ -1,5 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import React from 'react';
 import Header from './Pages/Header/Header';
 import Sidebar from './Pages/Sidebar/Sidebar';
 import Welcome from './Pages/Welcome/Welcome';
@@ -16,7 +16,7 @@ import Categories from './Pages/Products/Categories';
 import OneCategory from './Pages/Products/OneCategory';
 import PaymentPage from './Pages/Products/PaymentPage';
 import './global.css';
-// import ModalWnd from './components/Modal/ModalWnd';
+
 import {
     createBrowserRouter,
     createRoutesFromElements,
@@ -28,6 +28,7 @@ import {
 const Root = () => {
     return (
         <div className='container'>
+            
             <Header />
             <Outlet />
             <Sidebar />
@@ -42,7 +43,6 @@ const router = createBrowserRouter(
             <Route path='about' element={ <About /> } />
             <Route path='users' element={<Users/>} />
             <Route path="users/:userId" element={<UserPage />}  />
-            {/* <Route path='buy' element={<ModalWnd/>} /> */}
             <Route path='goods' element={<ProductList/>} />
             <Route path='goods/:id'  element={<ProductDetails/>} />
             <Route path='comments'  element={<Comments/>} />
@@ -55,6 +55,7 @@ const router = createBrowserRouter(
             {/* <Route path='users/:userId' loader={loader} element={<UserPage />} errorElement={<ErrorPage/>} /> */}
             {/* <Route path="/users/:userId" render={({ match }) => <UserPage userId={match.params.userId} />} /> */}
             <Route path='*' element={ <ErrorPage /> } />
+            
         </Route> 
     )
 );

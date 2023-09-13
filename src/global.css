@@ -43,6 +43,13 @@ h3{
     margin: 1rem;
     border-radius: 3px;
 }
+.tabs button{
+    color:rgb(32, 15, 15);
+    background: rgb(0, 150, 0);
+    padding: 0.4rem;
+    margin-left: 0.5rem;
+    border-radius: 3px;
+}
 .userlist {
     border: '1px solid black';
     text-align: 'center';

@@ -6,8 +6,8 @@ function Header() {
     <div className="Header">
       <ul>
         <li><Link to='/'><h1>Головна</h1></Link></li>
-        <li><Link to="/category"><h1>Категорії</h1></Link></li>
-        <li><Link to="/goods"><h1>Товари</h1></Link></li>
+        <li><Link to="/categoriesGoods"><h1>Категорії</h1></Link></li>
+        <li><Link to="/goodsOrders"><h1>Товари</h1></Link></li>
         <li><Link to="/about"><h1>Про маркетплейс</h1></Link></li>
         <li>
           <form className="nav">

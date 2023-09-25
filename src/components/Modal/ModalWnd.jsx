@@ -48,7 +48,9 @@ export default function ModalWnd({ call, onDestroy }) {
                             </tr>
                             <tr>
                                 <td>
-                                    <img src={product.photosGoodsDTOS[0].path} alt={product.name}></img>
+                                    {product && product.photosGoodsDTOS && product.photosGoodsDTOS.length > 0 && (
+                                        <img src={product.photosGoodsDTOS[0].path} alt={product.name} />
+                                    )}
                                 </td>
                                 <td>
                                     <tr>
@@ -63,7 +65,7 @@ export default function ModalWnd({ call, onDestroy }) {
                                         </td>
                                     </tr>
 
-                                   
+
                                     <button onClick={onDestroy} className='reject'>Переглянути товар</button>
                                 </td>
                             </tr>
@@ -78,7 +80,9 @@ export default function ModalWnd({ call, onDestroy }) {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src={good.photosGoodsDTOS[0].path} alt={product.name}></img>
+                                    {product && product.photosGoodsDTOS && product.photosGoodsDTOS.length > 0 && (
+                                        <img src={product.photosGoodsDTOS[0].path} alt={product.name} />
+                                    )}
                                     </td>
                                     <td>
                                         <tr>
@@ -101,7 +105,7 @@ export default function ModalWnd({ call, onDestroy }) {
                     <div className='sum'>
                         <h3>Загальна сума: <span>{product.id}</span></h3>
                         <Link to='/payment'><button className='accept'>До оплати</button></Link>{/*input method='post' */}
-                        
+
                     </div>
                 </div>
             </div>

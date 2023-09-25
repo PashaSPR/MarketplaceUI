@@ -15,7 +15,7 @@ function Sidebar() {
             .then((response) => setCategories(response.data))
             .catch((error) => console.log(error));
     }, []);
-    console.log(categories);
+    // console.log(categories);
     return (
         <div className="Sidebar">
             {/* <nav>

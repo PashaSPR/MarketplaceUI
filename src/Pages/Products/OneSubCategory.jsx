@@ -14,7 +14,7 @@ export default function OneSubCategory()
     axios.get(`http://localhost:8080/subcategoriesGoods/${subCategoryId}`)
       .then(response => setSubCategories(response.data))
       .catch(error => console.log(error));
-  }, [categoryId]);
+  }, [subCategoryId]);
   if (!Array.isArray(subCategories)) {
     return <div>Loading...</div>; // Або можна показати попередження або помилку
   }

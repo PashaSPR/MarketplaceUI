@@ -45,8 +45,10 @@ const router = createBrowserRouter(
             <Route path='about' element={ <About /> } />
             <Route path='users' element={<Users/>} />
             <Route path="users/:userId" element={<UserPage />}  />
-            <Route path='goods' element={<ProductList/>} />
-            <Route path='goods/:id'  element={<ProductDetails/>} />
+            {/* <Route path='goods' element={<ProductList/>} />
+            <Route path='goods/:id'  element={<ProductDetails/>} /> */}
+            <Route path='goodsOrders' element={<ProductList/>} />
+            <Route path='goodsOrders/:id'  element={<ProductDetails/>} />
             <Route path='comments'  element={<Comments/>} />
             <Route path='subcategoriesGoods'  element={<SubCategories/>} />
             <Route path='subcategoriesGoods/:id'  element={<OneSubCategory/>} />

@@ -22,7 +22,7 @@ export default function SubCategories(){
           {subCategories.map(subCategory => (
             <div key={subCategory.id}>
               <Link to={`/subcategoriesGoods/${subCategory.id}`}> 
-                <button className='btn-list'>
+                <button className='btn-old'>
                   <h2>{subCategory.name}</h2> 
                 </button>
               </Link>

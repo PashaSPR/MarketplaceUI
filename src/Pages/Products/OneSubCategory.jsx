@@ -7,27 +7,66 @@ import axios from 'axios';
 export default function OneSubCategory()
 {
   const { subCategoryId } = useParams();
-  const [subCategories, setSubCategories] = useState([]);
-
+  const [subCategory, setSubCategory] = useState(null);
+// console.log(subCategoryId);
   useEffect(() => {
-    // Отримання списку товарів певної категорії
-    axios.get(`http://localhost:8080/subcategoriesGoods/${subCategoryId}`)
-      .then(response => setSubCategories(response.data))
+    // Отримання списку товарів певної субкатегорії
+    axios.get(`http://localhost:8080/subcategoriesGoods/getOne?id=${subCategoryId}`)
+      .then(response => setSubCategory(response.data))
       .catch(error => console.log(error));
   }, [subCategoryId]);
-  if (!Array.isArray(subCategories)) {
+  console.log(subCategory);
+  if (!subCategory) {
     return <div>Loading...</div>; // Або можна показати попередження або помилку
   }
   return (
     <div className="Main">
-      <h1>Товари в категорії </h1>
-      {subCategories.map(subCategory => (
-        <div key={subCategory.id}>
-          <h2>{subCategory.name}</h2>
-          <p>ID: {subCategory.subcategories.name}</p>
+      <h1>Товари в категорії \\{subCategory.name}\\</h1>
+      {/* {subCategory.map((goods) => (
+            <h1>{goods.name}</h1>
+            // <div key={goodsInvoice.id}>
+            //   <Link to={`/goodsInvoices/${goodsInvoice.id}`}>
+            //     <button className="btn-list">
+            //       <div className="name-img">
+            //         <h2>{goodsInvoice.goods.name}</h2>
+            //         {goodsInvoice.goods.photosGoodsDTOS && goodsInvoice.goods.photosGoodsDTOS.length > 0 ? (
+            //           <img
+            //             src={goodsInvoice.goods.photosGoodsDTOS[0].path}
+            //             alt={goodsInvoice.goods.photosGoodsDTOS[0].discription}
+            //             onError={(e) => {
+            //               e.target.src =
+            //                 'https://image-thumbs.shafastatic.net/807950839_310_430';
+            //             }}
+            //           />
+            //         ) : (
+            //           <img src="https://image-thumbs.shafastatic.net/807950839_310_430" alt="Дефолтне фото" />
+            //         )}
+            //       </div>
+
+            //       <div className="price">
+            //         <table>
+            //           <tr>
+            //             <td><h1>Ціна: </h1></td>
+            //             <td><h3>{goodsInvoice.price}</h3></td>
+            //           </tr>
+            //           <tr>
+            //             <td><h1>Залишок: </h1></td>
+            //             <td>
+            //               <h3>{goodsInvoice.quantity}</h3>
+            //             </td>
+            //           </tr>
+            //         </table>
+            //       </div>
+            //     </button>
+            //   </Link>
+            // </div>
+          ))} */}
+        <div>
+          
+          <p>ID: {subCategory.id}</p>
           {/* Додайте інші поля товару, які вам потрібні */}
         </div>
-      ))}
+      
     </div>
   );
 }

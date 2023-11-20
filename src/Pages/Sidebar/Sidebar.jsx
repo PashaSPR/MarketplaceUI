@@ -45,13 +45,15 @@ function Sidebar() {
             </nav>
             <hr></hr> */}
             <h3>Субкатегорії</h3>
-                <ul>
-                    {/* фільтрація товарів по віповідній категорії чи субкатегорії */}
-            {subcategories.map((subcategory) => (
-                    <li key={subcategory.id}><NavLink to={`subcategoriesGoods/${subcategory.id}`}>{subcategory.name}</NavLink></li>
-                    
-                    ))}
-                </ul>
+            <ul>
+                {/* фільтрація товарів по віповідній категорії чи субкатегорії */}
+                {subcategories.map((subcategory) => (
+                    <li key={subcategory.id}>
+                        <NavLink to={`/subcategoriesGoods/${subcategory.id}`}>{subcategory.name}</NavLink>
+                    </li>
+
+                ))}
+            </ul>
             <hr></hr>
             <h3>Категорії</h3>
             <ul>

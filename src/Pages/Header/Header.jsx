@@ -7,14 +7,16 @@ function Header() {
       <ul>
         <li><Link to='/'><h1>Головна</h1></Link></li>
         <li><Link to="/categoriesGoods"><h1>Категорії</h1></Link></li>
-        <li><Link to="/goodsOrders"><h1>Товари</h1></Link></li>
+        <li><Link to="/subcategoriesGoods"><h1>СубКатегорії</h1></Link></li>
+        {/* <li><Link to="/goodsOrders"><h1>Товари</h1></Link></li> */}
+        <li><Link to="/goodsInvoices"><h1>Товари</h1></Link></li>
         <li><Link to="/about"><h1>Про маркетплейс</h1></Link></li>
-        <li>
+        {/* <li>
           <form className="nav">
             <input type="text" placeholder="Пошук..." />
             <button type="submit">Знайти</button>
           </form></li>
-          <li></li>
+          <li></li> */}
       </ul>
 
     </div>

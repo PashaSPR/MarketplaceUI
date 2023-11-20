@@ -15,10 +15,10 @@ function Sidebar() {
             .then((response) => setCategories(response.data))
             .catch((error) => console.log(error));
     }, []);
-    console.log(categories);
+    // console.log(categories);
     return (
         <div className="Sidebar">
-            <nav>
+            {/* <nav>
                 <ul>
                     <li>
                         <NavLink to="/users">Користувачі</NavLink>
@@ -43,12 +43,12 @@ function Sidebar() {
                     </li>
                 </ul>
             </nav>
-            <hr></hr>
+            <hr></hr> */}
             <h3>Субкатегорії</h3>
                 <ul>
                     {/* фільтрація товарів по віповідній категорії чи субкатегорії */}
             {subcategories.map((subcategory) => (
-                    <li key={subcategory.id}><NavLink to="">{subcategory.name}</NavLink></li>
+                    <li key={subcategory.id}><NavLink to={`subcategoriesGoods/${subcategory.id}`}>{subcategory.name}</NavLink></li>
                     
                     ))}
                 </ul>

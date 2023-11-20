@@ -24,7 +24,7 @@ export default function Categories() {
       {categories.map(category => (
         <div key={category.id}>
           <Link to={`/categoriesGoods/${category.id}`}> 
-            <button className='btn-list'>
+            <button className='btn-old'>
               <h2>{category.name}</h2> 
             </button>
           </Link>
